@@ -46,14 +46,14 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/tuttle/Projects/openwatch/openwatch/static/'
+MEDIA_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://openwatch.net/static/'
+MEDIA_URL = 'localhost:8000/static/'
 
-UPLOAD_ROOT = '/var/www/openwatch/uploads/'
+UPLOAD_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'uploads')
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
